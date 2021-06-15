@@ -5,6 +5,7 @@
 /*--NAV-LINKS-----*/
 /*--ABOUT-ME------*/
 /*--WORK----------*/
+/*--CARDS---------*/
 /*--FOOTER--------*/
 /*--SCALE---------*/
 
@@ -14,6 +15,8 @@
 :root{
     --darkBackground: rgb(35, 46, 54);
     --creamBackground: rgb(188, 200, 201);
+    --cardText: rgb(228, 231, 222);
+    --sideFont: 40px;
 }
 
 *{
@@ -34,7 +37,7 @@ header{
     text-align:right;
     background: cadetblue;
     font-size: 200%;
-    color: rgb(35, 46, 54);
+    color: var(--darkBackground)
     overflow: hidden;
 }
 
@@ -79,6 +82,7 @@ nav a:hover{
     border: 5px solid cadetblue;
     align-self: center;
     height: 300px;
+    margin: 20px;
 }
 .about-me h2{
     display: flex;
@@ -87,7 +91,7 @@ nav a:hover{
     align-self: center;
     padding-left: 10%;
     padding-right: 4%;
-    font-size: 40px;
+    font-size: var(--sideFont);
 }
 
 .about-me p{
@@ -100,41 +104,71 @@ nav a:hover{
 
 .work{
     display:flex;
+    justify-content: space-evenly;
     padding-top:5%;
     padding-bottom: 5%;
-    border: solid black;
+
 }
 
 .work h2{
     display: flex; 
     justify-content: center;
     color: cadetblue;
-    padding-left: 10%;
+    padding-left: 30%;
     padding-right: 4%;
+    font-size: var(--sideFont);
+    border-right: 5px solid cadetblue;
 }
-/*
+
+
+/*----WORK BOXES---*/
 .work ul{
     display: flex;
     flex-wrap: wrap;
-    border-left: 5px solid cadetblue;
-  
+    padding: 2%;
+    justify-content: center;
 }
 
 .work li {  
-    padding:100px;
-    flex: 2 1 50%;
+    padding:10px;
+    border: 5px solid cadetblue;
+    margin:10px;
+    justify-self: flex-end;
 }
 
 .work li:hover{
-    filter: opacity(25%);
-    color:cornflowerblue;
+    background-color:cornflowerblue;
+    filter: opacity(25%); 
+}
+
+
+/*----CARDS----*/
+.card{
+    position:relative;
 }
 
 .card1{
-margin-right: 20px;
-flex: 1 1 100%;
+    position:relative;
 }
-*/
+/*This Extra Card Class was Neccesary for the first card to be biggest*/
+.card1 img{
+    width: 500px;
+    height: 400px;
+    }
+
+.card img{
+    width: 250px;
+    height: 150px;
+}
+
+/*Handles the boxes on each work image*/
+.image-box{
+position:absolute;
+bottom:20px;
+padding-left: 15%;
+background-color: cadetblue;
+color: var(--cardText);
+}
 
 /*----FOOTER----*/
 footer 
@@ -152,8 +186,7 @@ footer
 
 footer ul{
     border: 0px;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 
 footer a{
@@ -162,6 +195,14 @@ footer a{
 }
 
 /*---SCALE---*/
+@media screen and (max-width: 1187px)
+{
+    
+.card1 img{
+    width: 250px;
+    height: 150px;
+    }
+}
 @media screen and (max-width:667px){
   *{
       font-size: 100%;
@@ -174,11 +215,11 @@ footer a{
   nav{
       display:flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: flex-end;
       margin: 2px;
   }
   nav a{
-     font-size: 80%;
+     font-size: 70%;
      border-radius: 10px;
      background-color: rgb(44, 67, 68);
   };
