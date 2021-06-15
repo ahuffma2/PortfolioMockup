@@ -1,0 +1,175 @@
+
+/*TABLE OF CONTENTS*/
+/*--GLOBAL--*/
+/*--HEADER--*/
+/*--NAV-LINKS-----*/
+
+
+
+/*----GLOBAL----*/
+:root{
+    --darkBackground: rgb(35, 46, 54);
+    --creamBackground: rgb(188, 200, 201);
+}
+
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+
+body {
+    margin:0;
+    background-color: var(--creamBackground);
+}
+
+header{
+    position:absolute;top:8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width:25%;
+    z-index: 1;
+    text-align:right;
+    background: cadetblue;
+    font-size: 200%;
+    color: rgb(35, 46, 54);
+    overflow: hidden;
+}
+
+/*----NAV LINKS----*/
+nav{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--darkBackground);
+}
+
+nav a{
+    background-color: dark;
+    color: cadetblue;
+    font-weight:bold;
+    float:right;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 130%;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: var(--creamBackground) ;
+}
+
+.hero{
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/blue-space.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+/*----ABOUT ME---*/
+.about-me{
+    display:flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    border-right: solid cadetblue;
+ 
+}
+
+.about-me h2{
+    display: flex;
+    color: cadetblue;
+    justify-content: center;
+    align-self: center;
+    padding-left: 10%;
+    padding-right: 4%;
+    border:solid black;
+}
+
+.about-me p{
+   
+    border-left: 5px solid cadetblue;
+    padding: 2%;
+}
+
+/*----WORK----*/
+.work{
+    display:flex;
+    padding-right: 10%;
+}
+
+.work h2{
+    display: flex; 
+    justify-content: center;
+    color: cadetblue;
+    padding-left: 10%;
+    padding-right: 4%;
+}
+
+
+.work ul{
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 5px solid cadetblue;
+  
+}
+
+.work li {  
+    padding:100px;
+    flex: 2 1 50%;
+}
+
+.work li:hover{
+    filter: opacity(25%);
+}
+
+.card1{
+margin-right: 20px;
+flex: 1 1 100%;
+}
+
+/*----FOOTER----*/
+footer 
+{
+    color:cadetblue;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--darkBackground);
+    color: white;
+    text-align: center;
+    color:rgb(188, 200, 201);
+}
+
+footer ul{
+    border: 0px;
+    text-decoration: none;
+    
+}
+
+footer a{
+    color:rgb(188, 200, 201);
+    font-size: 100%;
+}
+
+@media screen and (max-width:667px){
+  *{
+      font-size: 100%;
+  }
+
+  .header-container{
+      text-align: right;
+  }
+
+  nav{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 2px;
+  }
+  nav a{
+     font-size: 80%;
+     border-radius: 10px;
+     background-color: rgb(44, 67, 68);
+  };
+
+}
