@@ -8,7 +8,9 @@ Navigation Bar will change colors dynamically when hovered.
 
 Work Cards will change in opacity and hue when hovered over as awell. 
 
+Table of Contents comments used in CSS for optimal organization
 
+![Site Overview.](https://github.com/ahuffma2/PortfolioMockup/blob/main/assets/images/portfolio%20example.JPG)
 ## Links
 Repository: [GitHub](https://github.com/ahuffma2/PortfolioMockup) 
 
