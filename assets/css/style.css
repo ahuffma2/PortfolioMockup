@@ -37,7 +37,7 @@ header{
     text-align:right;
     background: cadetblue;
     font-size: 200%;
-    color: var(--darkBackground)
+    color: var(--darkBackground);
     overflow: hidden;
 }
 
